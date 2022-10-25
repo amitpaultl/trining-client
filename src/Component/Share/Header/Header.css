@@ -1,0 +1,50 @@
+a.logo {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-weight: 900;
+}
+
+
+.menu-area{
+    background-color: #e3f6ff;
+}
+
+.logo{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.menu{
+    margin: 0 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    text-decoration: none;
+    
+}
+.menu:hover{
+    color: #f08f16 !important;
+}
+.pofile-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+a.menu.coustom {
+    background: #f08f16;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 0px 22px 0px 22px;
+}
+a.menu.coustom:hover {
+    color: rgb(0, 0, 0) !important;
+}
