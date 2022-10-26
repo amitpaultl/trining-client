@@ -1,0 +1,16 @@
+.course img{
+    width: 100%;
+    cursor: pointer;
+}
+
+.course {
+    font-family: lato;
+    
+    border: 1px solid black;
+    margin-top: 30px;
+}
+.course h3 {
+    font-size: 24px;
+    font-weight: 700;
+    
+}

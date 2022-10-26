@@ -1,0 +1,49 @@
+.form-area.chakOut{
+    margin: 0;
+}
+
+.order-view h2 {
+    font-size: 30px;
+    font-family: lato;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.product-img img {
+    width: 100px;
+}
+
+
+
+.single-product {
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 9px;
+}
+
+.product {
+    border: 1px solid #000;
+    padding: 10px;
+    border-radius: 5px;
+    background: aliceblue;
+    margin: 10px 0;
+}
+
+
+.order-view button {
+    border: none;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: lata;
+    background: #ffbd5b;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.single-product p {
+    margin: 0;
+}

@@ -30,7 +30,7 @@ const Header = () => {
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
                             <Link to={'/'} className='menu'>Home</Link>
-                            <Link to={'/profile'} className='menu'>Course</Link>
+                            <Link to={'/course'} className='menu'>Course</Link>
                             <Link className='menu'>Blog</Link>
                             <Link className='menu'>Fiq</Link>
                             {
@@ -39,10 +39,6 @@ const Header = () => {
                                     {
                                         user?.photoUR ? <img title={user.displayName} className='pofile-img' src={user.photoURL} alt="" />:<span className='pofile-icon' title={user.displayName}><FaUser/></span>
                                         
-                                        
-                                        
-                                        
-
                                     }
                                     
 
