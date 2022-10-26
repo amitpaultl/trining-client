@@ -75,8 +75,8 @@ const auth = getAuth(app);
                 // set user
                 setuser(crentuser)
                 // loding
-                setLoader(false)
             }
+            setLoader(false)
           });
 
           return () =>{

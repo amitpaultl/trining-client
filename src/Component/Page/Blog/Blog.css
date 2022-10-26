@@ -1,0 +1,28 @@
+.blog-section{
+    margin: 40px 0; 
+}
+
+.single-blog{
+    margin-bottom: 100px;
+}
+
+.single-blog img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.blog-area p {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    color: #696969;
+}
+
+.blog-area h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 46px;
+    font-family: lato;
+    margin: 16px 0;
+}

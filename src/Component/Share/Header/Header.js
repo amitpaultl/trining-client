@@ -31,7 +31,7 @@ const Header = () => {
                         <Navbar.Text>
                             <Link to={'/'} className='menu'>Home</Link>
                             <Link to={'/course'} className='menu'>Course</Link>
-                            <Link className='menu'>Blog</Link>
+                            <Link to={'/blog'} className='menu'>Blog</Link>
                             <Link className='menu'>Fiq</Link>
                             {
                                 user?.uid ? <>

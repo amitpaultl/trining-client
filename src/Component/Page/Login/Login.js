@@ -1,10 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle ,FaGithub} from 'react-icons/fa';
 import { useContext } from 'react';
 import { AuthProvider } from '../../Context/Context';
 import toast, { Toaster } from 'react-hot-toast';
 const Login = () => {
+    // navigete
+    const nayigate = useNavigate();
+    // loding 
+    const location = useLocation();
+    // location navigete
+    const from = location.state?.from?.pathname || '/';
     // context api handaling
     const {singinemail,googlelogin,githubLogin} = useContext(AuthProvider)
     // Email input submit login handaler
@@ -17,7 +23,8 @@ const Login = () => {
        singinemail(email, password)
        .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
+        nayigate(from,{replace:true})
+        
       })
       .catch((error) => {
         // Handle Errors here.
@@ -29,11 +36,13 @@ const Login = () => {
     // google sing in
     const googlesiLogin =()=>{
         googlelogin()
+        nayigate(from,{replace:true})
     }
 
     // github Login
     const githubin =()=>{
         githubLogin()
+        nayigate(from,{replace:true})
     }
 
     return (
