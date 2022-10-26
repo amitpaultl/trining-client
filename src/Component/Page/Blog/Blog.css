@@ -26,3 +26,54 @@
     font-family: lato;
     margin: 16px 0;
 }
+
+
+.search {
+    padding: 16px;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-bottom: 23px;
+}
+
+.search button {
+    margin-left: 10px;
+    padding: 8px 21px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #ffa63d;
+    border: none;
+    border-radius: 5px;
+}
+
+.more-post img {
+    width: 130px;
+    height: 97px;
+}
+
+.title-post {
+    margin-left: 13px;
+}
+
+.title-post h2 {
+    font-size: 20px;
+    font-family: lato;
+}
+
+.title-post p {
+    margin: 0;
+}
+
+.more-post.d-flex {
+    margin-bottom: 30px;
+}
+
+.recent-post {
+    padding: 15px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.search input {
+    padding: 5px 10px;
+    width: 79%;
+}

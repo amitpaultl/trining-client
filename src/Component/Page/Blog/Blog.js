@@ -41,23 +41,24 @@ const Blog = () => {
                         <div className="side-right">
                             <div className="search">
                                 <input type="text" />
+                                <button>Search</button>
                             </div>
                             <div className="recent-post">
-                                <div className="more-post">
+                                <div className="more-post d-flex">
                                     <img src="https://media.istockphoto.com/photos/group-of-college-students-studying-together-picture-id1278978962?k=20&m=1278978962&s=170667a&w=0&h=Jv-IcP6f66PJ6692vpFVUL_alhfNCWwmyJ8aokPS7ag=" alt="" />
                                     <div className="title-post">
                                         <h2>Learn Webs Applications Development from Experts</h2>
                                         <p>April 1, 2022</p>
                                     </div>
                                 </div>
-                                <div className="more-post">
+                                <div className="more-post d-flex">
                                     <img src="https://www.thoughtco.com/thmb/Te3rYgARLyB0LXptCcPJOGkzHbI=/3415x2561/smart/filters:no_upscale()/505082395-56a4b9625f9b58b7d0d886be.jpg" alt="" />
                                     <div className="title-post">
                                         <h2>Learn Webs Applications Development from Experts</h2>
                                         <p>April 1, 2022</p>
                                     </div>
                                 </div>
-                                <div className="more-post">
+                                <div className="more-post d-flex">
                                     <img src="https://media.istockphoto.com/photos/group-of-college-students-studying-together-picture-id1278978962?k=20&m=1278978962&s=170667a&w=0&h=Jv-IcP6f66PJ6692vpFVUL_alhfNCWwmyJ8aokPS7ag=" alt="" />
                                     <div className="title-post">
                                         <h2>Learn Webs Applications Development from Experts</h2>
