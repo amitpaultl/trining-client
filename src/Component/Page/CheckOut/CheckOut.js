@@ -1,10 +1,17 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import swal from 'sweetalert';
 import './CheckOut.css'
 const CheckOut = () => {
     const data = useLoaderData()
     const {name,picture,balance}=data
-    console.log(data);
+    const buynow =()=>{
+        swal({
+            title: "Successfully buy",
+            text: "Congratulation Your Shopping",
+            icon: "success",
+          });
+    }
     return (
         <div>
             <div className="container">
@@ -48,7 +55,7 @@ const CheckOut = () => {
                                 <p>Total</p>
                                 <p>{balance}</p>
                             </div>
-                            <button>Buy now</button>
+                            <button onClick={buynow}>Buy now</button>
                         </div>
                     </div>
                 </div>

@@ -13,7 +13,7 @@ const auth = getAuth(app);
     const [user, setuser] = useState();
 
     // lodar 
-    const [loder, setLoader] = useState(false)
+    const [loder, setLoader] = useState(true)
 
     // google provider
     const googleprovider = new GoogleAuthProvider();
