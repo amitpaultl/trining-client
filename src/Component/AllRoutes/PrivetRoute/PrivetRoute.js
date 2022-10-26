@@ -1,19 +1,27 @@
 import React, { useContext } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { AuthProvider } from '../../Context/Context';
-
-const PrivetRoute = ({children}) => {
-    const {user,loder} = useContext(AuthProvider)
+import './PraviteRout.css'
+const PrivetRoute = ({ children }) => {
+    const { user, loder } = useContext(AuthProvider)
     const location = useLocation()
-    console.log(user);
-    if(loder){
-        return <div>Loding....</div>
+   
+    if (loder) {
+        return (
+                    <div className='spanier text-center '>
+                        <div className="spanier-center spinner-grow" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+        
+
+                )
     }
 
-    if(user){
+    if (user) {
         return children
-    }else{
-        return <Navigate to='/login' state={{from: location}} replace></Navigate>
+    } else {
+        return <Navigate to='/login' state={{ from: location }} replace></Navigate>
     }
 };
 

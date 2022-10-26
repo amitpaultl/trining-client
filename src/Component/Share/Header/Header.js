@@ -20,7 +20,7 @@ const Header = () => {
             toast.error(errorMessage)
           });
     }
-   console.log(user);
+    
     return (
         <div className="menu-area">
             <Navbar>
@@ -36,10 +36,12 @@ const Header = () => {
                             {
                                 user?.uid ? <>
                                     <Link className='menu coustom' onClick={singOut}  >Log Out</Link>
-                                    {
-                                        user?.photoUR ? <img title={user.displayName} className='pofile-img' src={user.photoURL} alt="" />:<span className='pofile-icon' title={user.displayName}><FaUser/></span>
-                                        
-                                    }
+                                    
+                                        {
+                                            user?.photoURL ? <img title={user.displayName} className='pofile-img' src={user.photoURL} alt="" />:<span className='pofile-img' title={user.displayName}><FaUser/></span>
+                                            
+                                        }
+                                   
                                     
 
                                 </>
