@@ -1,15 +1,44 @@
+.cou-title{
+    list-style: none;
+}
+
+.course-title {
+    margin-top: 30px;
+    padding: 14px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: aliceblue;
+}
+
+li.cou-title {
+    background: #12008e;
+    margin-bottom: 6px;
+    padding: 9px;
+    border-radius: 5px;
+}
+
+li.cou-title span {
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .course img{
     width: 100%;
-    cursor: pointer;
+    
 }
 
 .course {
     font-family: lato;
-    
+    cursor: pointer;
     border: 1px solid black;
     margin-top: 30px;
+    background: aliceblue;
 }
 .course h3 {
+    margin-bottom: 28px;
     font-size: 24px;
     font-weight: 700;
     
