@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Blog from '../../Page/Blog/Blog';
 import CheckOut from '../../Page/CheckOut/CheckOut';
 import Courses from '../../Page/Courses/Courses';
+import Error from '../../Page/Error/Error';
 import Home from '../../Page/Home/Home';
 import Login from '../../Page/Login/Login';
 import SingleCourse from '../../Page/SingleCourse/SingleCourse';
@@ -14,6 +15,7 @@ export const route = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement:<Error></Error>,
         children:[
             {
                 path: '/',
