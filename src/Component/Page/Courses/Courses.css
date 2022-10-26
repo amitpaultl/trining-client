@@ -10,6 +10,10 @@
     background: aliceblue;
 }
 
+.course:hover {
+    box-shadow: rgb(0 0 0 / 35%) 0 0 14px 9px;
+}
+
 li.cou-title {
     background: #000000;
     margin-bottom: 6px;

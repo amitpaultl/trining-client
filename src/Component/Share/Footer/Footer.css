@@ -1,0 +1,81 @@
+.footer h2 {
+    font-size: 35px;
+    color: #fff;
+    margin: 0;
+    line-height: 26px;
+    margin-bottom: 15px;
+    font-family: lato;
+}
+
+.footer-area {
+    background: #3b96ae;
+    padding: 150px 0;
+}
+
+.footer p {
+    color: #000;
+    font-size: 16px;
+}
+
+.social-midea li{
+    list-style: none;
+    display: inline-block;
+}
+
+.subscript {
+    width: 500px;
+    margin: auto;
+}
+
+.subscript input {
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,.2);
+    color: rgb(0, 0, 0);
+    border: 1px solid #868a8d;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 10px 20px;
+}
+
+
+
+.subscript button {
+    font-size: 16px;
+    font-weight: 700;
+    background: 0 0;
+    padding: 6px 33px 11px;
+    margin-left: 10px;
+    border: none;
+    color: #fff;
+    background-color: #d33;
+    border-radius: 5px;
+    height: 40px;
+    transition: all .5s;
+    margin-top: 12px;
+}
+
+.subscript button:hover {
+    background-color: #23272d;
+}
+
+.social-midea a {
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 100%;
+    width: 50px;
+    display: block;
+    line-height: 38px;
+    height: 50px;
+    font-size: 18px;
+    color: #fff;
+    margin: 10px;
+}
+
+.social-midea a svg {
+    font-size: 20px;
+    margin: 5px 4px 0px 4px;
+}
+
+.social-midea a:hover {
+    background: #d01313;
+}
