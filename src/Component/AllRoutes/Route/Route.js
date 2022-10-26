@@ -9,6 +9,7 @@ import Login from '../../Page/Login/Login';
 import SingleCourse from '../../Page/SingleCourse/SingleCourse';
 import SingUp from '../../Page/SingUp/SingUp';
 import Root from '../../Root/Root';
+import PrivetRoute from '../PrivetRoute/PrivetRoute';
 
 export const route = createBrowserRouter([
     {
@@ -38,7 +39,7 @@ export const route = createBrowserRouter([
             },
             {
                 path: '/checkout/:id',
-                element:<CheckOut></CheckOut>,
+                element:<PrivetRoute><CheckOut></CheckOut></PrivetRoute>,
                 loader:({params}) => fetch(`https://serve-data.vercel.app/course/${params.id}`)
             },
             {

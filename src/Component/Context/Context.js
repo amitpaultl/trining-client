@@ -86,7 +86,7 @@ const auth = getAuth(app);
 
     // context pass
 
-    const authinfo = {emailsingup,singinemail,googleSingup,googlelogin,gitgubSingUp,githubLogin,profile,user,logOut}
+    const authinfo = {emailsingup,singinemail,googleSingup,googlelogin,gitgubSingUp,githubLogin,profile,user,logOut,loder}
     return (
         <AuthProvider.Provider value={authinfo}>
             {children}
