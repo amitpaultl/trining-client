@@ -5,10 +5,14 @@ import { FaChrome ,FaCentercode} from 'react-icons/fa';
 export const AddcardProvider = createContext()
 
 const SingleCourse = () => {
+    // nagvite function
     const nagvite = useNavigate()
+
+    // api  lode data
     const data = useLoaderData();
     const {id, name,about,author,balance,ditles,picture,deration,larne}=data;
 
+    // go to card page
     const card = (id)=>{
         nagvite(`/checkout/${id}`)
     } 
@@ -17,7 +21,7 @@ const SingleCourse = () => {
 
             <div className='container'>
                 <div className="row">
-                    <div className="col-md-7">
+                    <div className="col-md-12 col-lg-7">
                         <div className="course-description">
                             <div className="course-title">
                                 <h2>{name}</h2>
@@ -45,7 +49,7 @@ const SingleCourse = () => {
                             <p className='about'>{ditles}</p>
                         </div>
                     </div>
-                    <div className="col-md-5">
+                    <div className="col-md-12 col-lg-5">
                         <div className="course-fee">
                             <img src={picture} alt="" />
                             <div className="course-fee-datales">

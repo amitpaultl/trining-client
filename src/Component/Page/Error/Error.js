@@ -5,6 +5,7 @@ import Header from '../../Share/Header/Header';
 import './Error.css'
 
 const Error = () => {
+    // error function uplode
     const error = useRouteError()
     return (
         <div >

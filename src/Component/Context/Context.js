@@ -58,8 +58,8 @@ const auth = getAuth(app);
     }
 
     // profile up date
-    const profile =(name)=>{
-        return updateProfile(auth.currentUser, { displayName: name})
+    const profile =(name, url)=>{
+        return updateProfile(auth.currentUser, { displayName: name, photoURL: url})
     }
 
     // log out

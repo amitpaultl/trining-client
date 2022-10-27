@@ -6,6 +6,7 @@ const Blog = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-7">
+                        {/* right blog  area*/}
                         <div className="bolg-area">
                             <div className="single-blog">
                                 <img src="https://www.oxfordlearning.com/wp-content/uploads/2018/11/group-photo-860x420.jpeg" alt="" />
@@ -37,6 +38,7 @@ const Blog = () => {
                             </div>
                         </div>
                     </div>
+                    {/* left blog area */}
                     <div className="col-md-5">
                         <div className="side-right">
                             <div className="search">

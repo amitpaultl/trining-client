@@ -3,8 +3,12 @@ import { useLoaderData } from 'react-router-dom';
 import swal from 'sweetalert';
 import './CheckOut.css'
 const CheckOut = () => {
+
+    // loade data api url
     const data = useLoaderData()
     const {name,picture,balance}=data
+
+    // popup buy btu click 
     const buynow =()=>{
         swal({
             title: "Successfully buy",
@@ -12,6 +16,7 @@ const CheckOut = () => {
             icon: "success",
           });
     }
+    
     return (
         <div>
             <div className="container">

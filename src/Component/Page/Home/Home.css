@@ -1,3 +1,4 @@
+/* hero-area srat */
 .hero-area{
     background-image: url('../../Asserst/image/Planning.jpg');
     background-size: cover;
@@ -31,7 +32,6 @@
 
 .hero h2 {
     font-size: 70px;
-    line-height: 77px;
     color: #fff;
     font-weight: 700;
     margin-bottom: 20px;
@@ -129,3 +129,18 @@ i {
     line-height: 34px;
     margin-top: 18px;
 }
+
+/* responsive */
+
+@media (min-width: 100px) and (max-width: 991.98px) {
+    .hero h2 {
+        font-size: 28px;
+    }
+ }
+
+ @media (min-width:100px) and (max-width: 585px) { 
+    .subscript {
+        width: auto;
+        margin: auto;
+    }
+  }

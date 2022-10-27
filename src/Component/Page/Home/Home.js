@@ -28,26 +28,26 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-3">
+                        <div className="col-md-6 col-lg-3 my-3">
                             <div className="career">
                                 <i><FaCameraRetro></FaCameraRetro></i>
                                 
                                 <h3>Content created by industry experts</h3>
                             </div>
                         </div>
-                        <div className="col-md-3">
+                        <div className="col-md-6 col-lg-3 my-3">
                             <div className="career">
                                 <i><FaFileAlt></FaFileAlt></i>
                                 <h3>Practical projects and assignments</h3>
                             </div>
                         </div>
-                        <div className="col-md-3">
+                        <div className="col-md-6 col-lg-3 my-3">
                             <div className="career">
                                 <i><FaHandshake></FaHandshake></i>
-                                <h3>Direct support from mentors</h3>
+                                <h3>Direct support from mentors projects</h3>
                             </div>
                         </div>
-                        <div className="col-md-3">
+                        <div className="col-md-6 col-lg-3 my-3">
                             <div className="career">
                                <i><FaDesktop></FaDesktop></i>
                                 <h3>Ease of learning from anywhere</h3>
@@ -65,28 +65,28 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-3">
+                        <div className="col-md-6 col-lg-3 my-3">
                             <div className="instructors">
                                 <img src="https://themehoster.com/tf/glomex/omexo/assets/images/instructor-1.jpg" alt="" />
                                 <h2>Shane Warne</h2>
                                 <p>Instructors</p>
                             </div>
                         </div>
-                        <div className="col-md-3">
+                        <div className="col-md-6 col-lg-3 my-3">
                             <div className="instructors">
                                 <img src="https://themehoster.com/tf/glomex/omexo/assets/images/instructor-2.jpg" alt="" />
                                 <h2>Avelina Smith</h2>
                                 <p>Instructors</p>
                             </div>
                         </div>
-                        <div className="col-md-3">
+                        <div className="col-md-6 col-lg-3 my-3">
                             <div className="instructors">
                                 <img src="https://themehoster.com/tf/glomex/omexo/assets/images/instructor-3.jpg" alt="" />
                                 <h2>John Bond</h2>
                                 <p>Instructors</p>
                             </div>
                         </div>
-                        <div className="col-md-3">
+                        <div className="col-md-6 col-lg-3 my-3">
                             <div className="instructors">
                                 <img src="https://themehoster.com/tf/glomex/omexo/assets/images/instructor-4.jpg" alt="" />
                                 <h2>Sophia Smith</h2>

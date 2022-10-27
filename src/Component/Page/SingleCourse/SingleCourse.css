@@ -1,3 +1,4 @@
+/* single right side */
 .single-course {
     margin: 100px 0; 
 }
@@ -69,7 +70,9 @@ p.about {
     height: auto;
 }
 
-/*  */
+/* /* single right side */ */
+
+/* single left side */
 .course-fee-datales h4 {
     font-size: 22px;
     margin: 16px 0;

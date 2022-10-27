@@ -1,3 +1,4 @@
+/* form style start */
 .form-area {
     border: 1px solid;
     padding: 45px 66px;
@@ -72,3 +73,4 @@ button.sinup:hover{
 .popup-login button:hover {
     background: wheat;
 }
+/* form style end */

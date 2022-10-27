@@ -1,3 +1,4 @@
+/* right side title link start */
 .cou-title{
     list-style: none;
 }
@@ -7,6 +8,10 @@
     border: 1px solid #000;
     border-radius: 5px;
     background: aliceblue;
+}
+
+.course-title.minge{
+    margin-top: 30px;
 }
 
 .course:hover {
@@ -32,6 +37,10 @@ li.cou-title span {
     cursor: pointer;
 }
 
+/* right side title link end */
+
+/* left side title link start */
+
 .course img{
     width: 100%;
     
@@ -50,3 +59,6 @@ li.cou-title span {
     font-weight: 700;
     
 }
+
+/* left side title link end */
+

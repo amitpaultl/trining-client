@@ -1,8 +1,12 @@
+/* right side check out start*/
 .form-area.chakOut{
     margin: 40px 0 0 0 ;
     background-color: aliceblue;
 }
 
+/* right side check out end*/
+
+/* left side check out area start */
 .order-view h2 {
     font-size: 30px;
     font-family: lato;
@@ -13,8 +17,6 @@
 .product-img img {
     width: 100px;
 }
-
-
 
 .single-product {
     margin-bottom: 10px;
@@ -33,7 +35,6 @@
     margin: 10px 0;
 }
 
-
 .order-view button {
     border: none;
     width: 100%;
@@ -48,3 +49,5 @@
 .single-product p {
     margin: 0;
 }
+
+/* left side check out area end */

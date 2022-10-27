@@ -1,29 +1,40 @@
 import React, { useContext } from 'react';
-import { Container, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthProvider } from '../../Context/Context';
 import './Header.css'
 import toast, { Toaster } from 'react-hot-toast';
-import { FaUser } from 'react-icons/fa';
+import { FaUser, FaRegMoon, FaSun } from 'react-icons/fa';
+import ToggleSwitch from '../../ToggleSwitch/ToggleSwitch';
+import { useState } from 'react';
 
 const Header = () => {
-    const {user,logOut} = useContext(AuthProvider);
+    const { user, logOut } = useContext(AuthProvider);
 
     // sing out 
-    const singOut =()=>{
-        logOut() 
-        .then(() => {
-            toast.success('Successfully log out')
-          }).catch((error) => {
-            // Handle Errors here.
-            const errorMessage = error.message;
-            toast.error(errorMessage)
-          });
+    const singOut = () => {
+        logOut()
+            .then(() => {
+                toast.success('Successfully log out')
+            }).catch((error) => {
+                // Handle Errors here.
+                const errorMessage = error.message;
+                toast.error(errorMessage)
+            });
     }
-    
+
+    // toggle class add
+
+    const [color, setColor] = useState(true)
+
+    const theme = () => {
+        setColor(current => !current);
+    }
+
+
     return (
         <div className="menu-area">
-            <Navbar>
+            <Navbar expand="lg">
                 <Container>
                     <Navbar.Brand> <Link to={'/'} className='logo'>SECRET</Link> </Navbar.Brand>
                     <Navbar.Toggle />
@@ -32,17 +43,16 @@ const Header = () => {
                             <Link to={'/'} className='menu'>Home</Link>
                             <Link to={'/course'} className='menu'>Course</Link>
                             <Link to={'/blog'} className='menu'>Blog</Link>
-                            <Link className='menu'>Fiq</Link>
+                            <Link className="menu">Fiq</Link>
+
                             {
                                 user?.uid ? <>
                                     <Link className='menu coustom' onClick={singOut}  >Log Out</Link>
-                                    
-                                        {
-                                            user?.photoURL ? <img title={user.displayName} className='pofile-img' src={user.photoURL} alt="" />:<span className='pofile-img' title={user.displayName}><FaUser/></span>
-                                            
-                                        }
-                                   
-                                    
+
+                                    {
+                                        user?.photoURL ? <img title={user.displayName} className='pofile-img' src={user.photoURL} alt="" /> : <span className='pofile-img' title={user.displayName}><FaUser /></span>
+
+                                    }
 
                                 </>
                                     :
@@ -52,6 +62,12 @@ const Header = () => {
                                     </>
 
                             }
+                            {/* toggle class add */}
+                            <Link className='menu' onClick={theme}>
+                                {
+                                    color ? <FaRegMoon /> : <FaSun />
+                                }
+                            </Link>
 
 
 
@@ -61,6 +77,32 @@ const Header = () => {
                 </Container>
             </Navbar>
             <Toaster />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
 
     );

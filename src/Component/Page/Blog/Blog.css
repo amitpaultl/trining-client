@@ -1,3 +1,4 @@
+/* right side */
 .blog-section{
     margin: 40px 0; 
 }
@@ -27,12 +28,20 @@
     margin: 16px 0;
 }
 
+/* right side end */
+
+/* left side start */
 
 .search {
     padding: 16px;
     border: 1px solid;
     border-radius: 5px;
     margin-bottom: 23px;
+}
+
+.search input {
+    padding: 5px 10px;
+    width: 79%;
 }
 
 .search button {
@@ -73,7 +82,6 @@
     border-radius: 5px;
 }
 
-.search input {
-    padding: 5px 10px;
-    width: 79%;
-}
+
+
+/* left side end */

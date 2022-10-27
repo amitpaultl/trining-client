@@ -17,6 +17,7 @@ const SingUp = () => {
         const comon = e.target
         const firstname = comon.firstname.value;
         const lastname = comon.lastname.value;
+        const url = comon.url.value;
         const email = comon.email.value;
         const password = comon.password.value;
         const conformpassword = comon.conformpassword.value;
@@ -30,7 +31,7 @@ const SingUp = () => {
         emailsingup(email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
-                profiles(fullName,)
+                profiles(fullName, url)
                 toast.success('Successfully Sign Up')
                 
                 console.log(user);
@@ -73,8 +74,8 @@ const SingUp = () => {
     }
 
     // profile update
-    const profiles =(name)=>{
-        profile(name)
+    const profiles =(name, url)=>{
+        profile(name, url)
     }
 
     return (
@@ -91,6 +92,10 @@ const SingUp = () => {
                             <div className="input-area">
                                 <label htmlFor="lastname">Last Name</label>
                                 <input type="text" name="lastname" id="" />
+                            </div>
+                            <div className="input-area">
+                                <label htmlFor="url">Image Url</label>
+                                <input type="text" name="url" id="" />
                             </div>
                             <div className="input-area">
                                 <label htmlFor="email">Email</label>

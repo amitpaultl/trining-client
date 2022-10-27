@@ -3,9 +3,13 @@ import { Navigate, useLocation } from 'react-router-dom';
 import { AuthProvider } from '../../Context/Context';
 import './PraviteRout.css'
 const PrivetRoute = ({ children }) => {
+    // context api
     const { user, loder } = useContext(AuthProvider)
+
+    //current location 
     const location = useLocation()
-   
+
+    //spanier add
     if (loder) {
         return (
                     <div className='spanier text-center '>
@@ -13,11 +17,10 @@ const PrivetRoute = ({ children }) => {
                             <span className="visually-hidden">Loading...</span>
                         </div>
                     </div>
-        
-
                 )
     }
 
+    //current User location replace
     if (user) {
         return children
     } else {
