@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { createContext } from 'react';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInWithRedirect, GithubAuthProvider, updateProfile, onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInWithRedirect, GithubAuthProvider, updateProfile, onAuthStateChanged, signOut, sendEmailVerification } from "firebase/auth";
 import app from '../Firebase/Firebase.int'
 import { useEffect } from 'react';
 export const AuthProvider = createContext()
@@ -61,6 +61,11 @@ const auth = getAuth(app);
     const profile =(name, url)=>{
         return updateProfile(auth.currentUser, { displayName: name, photoURL: url})
     }
+
+    // email sendEmailVerification 
+    // const emailVerification =()=>{
+    //     return sendEmailVerification(auth.currentUser)
+    // }
 
     // log out
     const logOut =()=>{

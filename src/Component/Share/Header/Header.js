@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthProvider } from '../../Context/Context';
 import './Header.css'
 import toast, { Toaster } from 'react-hot-toast';
 import { FaUser, FaRegMoon, FaSun } from 'react-icons/fa';
-import ToggleSwitch from '../../ToggleSwitch/ToggleSwitch';
 import { useState } from 'react';
 
 const Header = () => {
@@ -69,38 +68,11 @@ const Header = () => {
                                 }
                             </Link>
 
-
-
-
                         </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
             <Toaster />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         </div>
