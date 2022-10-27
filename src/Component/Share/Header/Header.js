@@ -43,7 +43,7 @@ const Header = () => {
                             <Link to={'/'} className='menu'>Home</Link>
                             <Link to={'/course'} className='menu'>Course</Link>
                             <Link to={'/blog'} className='menu'>Blog</Link>
-                            <Link className="menu">Fiq</Link>
+                            <Link to={'/faq'} className="menu">FAQ</Link>
 
                             {
                                 user?.uid ? <>

@@ -2,6 +2,10 @@ import React, { createContext } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import './SingleCourse.css'
 import { FaChrome ,FaCentercode} from 'react-icons/fa';
+
+import jsPDF from 'jspdf'
+import logo from '../../Asserst/image/a.png'
+
 export const AddcardProvider = createContext()
 
 const SingleCourse = () => {
@@ -16,6 +20,22 @@ const SingleCourse = () => {
     const card = (id)=>{
         nagvite(`/checkout/${id}`)
     } 
+
+    // pdf graneat 
+     const pdfGraneat =()=>{
+        var doc =new jsPDF('landscape','px','a4','false')
+        doc.addImage(logo,'PNG', 65,20,500,400)
+        doc.addPage()
+        doc.setFont('lato','bold')
+        doc.text(60,60,'Title')
+        doc.text(60,80, 'Price')
+        
+        doc.setFont('lato','Normal')
+        doc.text(100,60,name)
+        doc.text(100,80,balance)
+        doc.save('a.pdf')
+    }
+
     return (
         <div className="single-course ">
 
@@ -50,6 +70,7 @@ const SingleCourse = () => {
                         </div>
                     </div>
                     <div className="col-md-12 col-lg-5">
+                        
                         <div className="course-fee">
                             <img src={picture} alt="" />
                             <div className="course-fee-datales">
@@ -69,6 +90,14 @@ const SingleCourse = () => {
                                     </div>
                                 </div>
                             </div>
+                            
+                        </div>
+                        <div className="pdf text-center">
+                            <button onClick={pdfGraneat}>
+                                Download
+                            </button>
+                            
+                            
                             
                         </div>
                     </div>

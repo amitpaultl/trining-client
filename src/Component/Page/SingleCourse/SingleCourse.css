@@ -73,6 +73,9 @@ p.about {
 /* /* single right side */ */
 
 /* single left side */
+
+
+
 .course-fee-datales h4 {
     font-size: 22px;
     margin: 16px 0;
@@ -109,4 +112,14 @@ p.about {
     margin: 0;
     font-size: 16px;
     font-weight: 600;
+}
+
+.pdf.text-center button {
+    border: none;
+    font-size: 18px;
+    margin-top: 21px;
+    font-weight: 600;
+    background: #ff8d07;
+    padding: 11px 21px;
+    border-radius: 27px 0 27px 0;
 }

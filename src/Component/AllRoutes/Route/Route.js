@@ -4,6 +4,7 @@ import Blog from '../../Page/Blog/Blog';
 import CheckOut from '../../Page/CheckOut/CheckOut';
 import Courses from '../../Page/Courses/Courses';
 import Error from '../../Page/Error/Error';
+import Faq from '../../Page/Faq/Faq';
 import Home from '../../Page/Home/Home';
 import Login from '../../Page/Login/Login';
 import SingleCourse from '../../Page/SingleCourse/SingleCourse';
@@ -20,6 +21,10 @@ export const route = createBrowserRouter([
             {
                 path: '/',
                 element:<Home></Home>
+            },
+            {
+                path: '/faq',
+                element:<Faq></Faq>
             },
             {
                 path: '/login',
