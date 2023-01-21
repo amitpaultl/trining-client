@@ -4,6 +4,7 @@ import { FaGoogle ,FaGithub} from 'react-icons/fa';
 import { useContext } from 'react';
 import { AuthProvider } from '../../Context/Context';
 import toast, { Toaster } from 'react-hot-toast';
+import ForgetPassword from './ForgetPassword';
 const Login = () => {
     // navigete
     const nayigate = useNavigate();
@@ -12,7 +13,7 @@ const Login = () => {
     // location navigete
     const from = location.state?.from?.pathname || '/';
     // context api handaling
-    const {singinemail,googlelogin,githubLogin} = useContext(AuthProvider)
+    const {singinemail,googlelogin,githubLogin,setLoader} = useContext(AuthProvider)
     // Email input submit login handaler
     const headaler = (e) =>{
         e.preventDefault()
@@ -23,14 +24,25 @@ const Login = () => {
        singinemail(email, password)
        .then((userCredential) => {
         const user = userCredential.user;
-        nayigate(from,{replace:true})
+
+        if(user.emailVerified){
+
+            nayigate(from,{replace:true})
+
+        }else{
+           return toast.error('your email is not Verification')
+        }
         
       })
       .catch((error) => {
         // Handle Errors here.
         const errorMessage = error.message;
-        toast.error(errorMessage)
-      });
+        return toast.error(errorMessage)
+      })
+
+      .finally(()=>{
+        setLoader(false)
+      })
     }
 
     // google sing in
@@ -64,7 +76,7 @@ const Login = () => {
                         </form>
                         <div className="account">
                             <p>New Secret ? <Link to={'/singup'}>Create New Account </Link> </p>
-                            <Link>Forget password</Link>
+                            <Link to={'/forgetpass'}>Forget password</Link>
                         </div>
                             <hr />
                         <div className="popup-login">

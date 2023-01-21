@@ -11,7 +11,7 @@ const Home = () => {
                         <div className="col-md-12">
                             <div className="hero">
                                 <h4>START LEARNING FROM HOME</h4>
-                                <h2>Connect With Our Expert And <br /> Start Learning Today</h2>
+                                <h2>Connect With Our my Expert And <br /> Start Learning Today</h2>
                                 <p >We are providing high-quality online courses to improve your skill. Our all <br/> instructors are highly experienced and experts.</p>
                                 <button>FIND COURSES</button>
                             </div>

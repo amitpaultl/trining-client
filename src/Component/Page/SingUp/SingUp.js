@@ -8,7 +8,7 @@ import { AuthProvider } from '../../Context/Context';
 
 const SingUp = () => {
     // context api handaling
-    const { emailsingup,googleSingup,gitgubSingUp, profile } = useContext(AuthProvider)
+    const { emailsingup,googleSingup,gitgubSingUp, profile,emailVerification } = useContext(AuthProvider)
     
     // Email input submit handaler
     const headaler = (e) => {
@@ -32,15 +32,20 @@ const SingUp = () => {
             .then((userCredential) => {
                 const user = userCredential.user;
                 profiles(fullName, url)
-                toast.success('Successfully Sign Up')
+                // Email verification sent!
                 
+                emailVerification()
+                .then(() => {
+                        toast.success('Successfully Sign Up')
+                        toast.success('Email verification sent check your email')
+                  });
                 console.log(user);
                 // nayigate('/')
             })
             .catch((error) => {
                 // Handle Errors here.
                 const errorMessage = error.message;
-                toast.error(errorMessage)
+                return toast.error(errorMessage)
             });
     }
 

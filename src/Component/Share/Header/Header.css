@@ -30,10 +30,16 @@ a.logo {
     line-height: 20px;
     text-decoration: none;
     
+    
 }
 .menu:hover{
     color: #f08f16 !important;
 }
+
+.active{
+    color: #f08f16 !important;
+}
+
 .pofile-img{
     width: 40px;
     height: 40px;

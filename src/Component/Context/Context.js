@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { createContext } from 'react';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInWithRedirect, GithubAuthProvider, updateProfile, onAuthStateChanged, signOut, sendEmailVerification } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInWithRedirect, GithubAuthProvider, updateProfile, onAuthStateChanged, signOut, sendEmailVerification, sendPasswordResetEmail, updatePassword, updateEmail } from "firebase/auth";
 import app from '../Firebase/Firebase.int'
 import { useEffect } from 'react';
 export const AuthProvider = createContext()
@@ -63,9 +63,23 @@ const auth = getAuth(app);
     }
 
     // email sendEmailVerification 
-    // const emailVerification =()=>{
-    //     return sendEmailVerification(auth.currentUser)
-    // }
+    const emailVerification =()=>{
+        return sendEmailVerification(auth.currentUser)
+    }
+
+    // updatePassword 
+    const forgetpassword =(email)=>{
+        return sendPasswordResetEmail(auth, email)
+    }
+
+    // updatePassword
+    const newpasswordUpdat = (newPassword)=>{
+        return updatePassword(user, newPassword)
+    }
+    // update email
+    const newemailupdate = (newPassword)=>{
+        return updateEmail(auth.currentUser, newPassword)
+    }
 
     // log out
     const logOut =()=>{
@@ -77,9 +91,10 @@ const auth = getAuth(app);
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, (crentuser) => {
             if (crentuser) {
-                // set user
-                setuser(crentuser)
-                // loding
+                if(crentuser.emailVerified || crentuser === null ){
+                    setuser(crentuser)
+                }
+                
             }
             setLoader(false)
           });
@@ -91,7 +106,7 @@ const auth = getAuth(app);
 
     // context pass
 
-    const authinfo = {emailsingup,singinemail,googleSingup,googlelogin,gitgubSingUp,githubLogin,profile,user,logOut,loder}
+    const authinfo = {emailsingup,singinemail,googleSingup,googlelogin,gitgubSingUp,githubLogin,profile,user,logOut,loder,emailVerification,setLoader,forgetpassword,newpasswordUpdat,newemailupdate}
     return (
         <AuthProvider.Provider value={authinfo}>
             {children}

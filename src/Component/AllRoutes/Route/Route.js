@@ -6,9 +6,11 @@ import Courses from '../../Page/Courses/Courses';
 import Error from '../../Page/Error/Error';
 import Faq from '../../Page/Faq/Faq';
 import Home from '../../Page/Home/Home';
+import ForgetPassword from '../../Page/Login/ForgetPassword';
 import Login from '../../Page/Login/Login';
 import SingleCourse from '../../Page/SingleCourse/SingleCourse';
 import SingUp from '../../Page/SingUp/SingUp';
+import Userinfo from '../../Page/Userinfo/Userinfo';
 import Root from '../../Root/Root';
 import PrivetRoute from '../PrivetRoute/PrivetRoute';
 
@@ -23,8 +25,20 @@ export const route = createBrowserRouter([
                 element:<Home></Home>
             },
             {
+                path: '/home',
+                element:<Home></Home>
+            },
+            {
                 path: '/faq',
                 element:<Faq></Faq>
+            },
+            {
+                path: '/user',
+                element:<PrivetRoute><Userinfo></Userinfo></PrivetRoute> 
+            },
+            {
+                path: '/forgetpass',
+                element:<ForgetPassword></ForgetPassword>
             },
             {
                 path: '/login',

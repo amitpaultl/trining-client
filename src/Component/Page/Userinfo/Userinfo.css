@@ -1,0 +1,14 @@
+.profile-user2{
+    padding: 20px 0;
+}
+
+.image-user-2 img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profile-user2 h5 {
+    font-size: 23px;
+    margin: 16px 0;
+}
